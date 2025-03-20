@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn">☰</button>
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="AI CHATBOT.jpg" alt="AI Chatbot Logo">
+    </div>
+    <div class="page-header">
+        <h1 class="page-title">Contact Form</h1>
+        <p class="page-subtitle">Fill out the form below, and we will respond as soon as possible.</p>
+    </div>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+         <!-- CODE FROM FORMSPREE FOR EMAIL SENDING -->
+        <form action="https://formspree.io/f/mwplkaea" method="POST">
+            <label>
+                Your Name:
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                Your Email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Your Message:
+                <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+<footer class="footer">
+    <div class="footer-content">
+        <p>📍 Based in London, Enfield</p>
+        <p>📧 Email: <a href="mailto:johnnyelammar@gmail.com">johnnyelammar@gmail.com</a></p>
+        <p>📞 Phone: <a href="tel:07950266625">07950266625</a></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+</footer>
+</html>

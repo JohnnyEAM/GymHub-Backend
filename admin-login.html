@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - GymHub</title>
+    <link rel="stylesheet" href="admin-login.css">
+</head>
+<body>
+
+    <div class="dropdown">
+        <button class="dropbtn">☰</button>
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="logo">
+        <img src="AI CHATBOT.jpg" alt="AI Chatbot Logo">
+    </div>
+    
+    <h2>Admin Panel - GymHub</h2>
+    <p>Manage user feedback and chatbot interactions.</p>
+
+    <div class="feedback-buttons">
+        <button onclick="viewFeedback()">🔍 View Feedback</button>
+    </div>
+    <script>
+        // This function will redirect the admin to the Firebase Firestore Feedback page (Firebase Console)
+        function viewFeedback() {
+            window.open("https://console.firebase.google.com/project/gymhub-contact-form/firestore/data/~2Ffeedback", "_blank");
+        }
+    </script>
+</body>
+</html>

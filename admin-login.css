@@ -1,0 +1,173 @@
+/* General Page Styling */
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Dropdown Menu */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Universal Styles */
+* {
+    text-decoration: none;
+}
+
+/* NAVBAR & DROPDOWN MENU */
+.dropdown {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect - Button Glows */
+.dropbtn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: black;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect on Links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 100px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Slight hover effect for logo */
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Heading & Description */
+h2 {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Feedback Buttons (Square & More Spacing) */
+.feedback-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Increased space between buttons */
+}
+
+/* Individual Button Styling */
+.feedback-buttons button {
+    width: 150px; /* Bigger size */
+    height: 150px; /* Makes them a perfect square */
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Hover Effect */
+.feedback-buttons button:hover {
+    background: #555;
+}
+.footer {
+    background-color: #222;  /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.footer a {
+    color: #1e90ff; /* Nice blue for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+

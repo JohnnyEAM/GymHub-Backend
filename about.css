@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Navbar Dropdown */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Universal Styles */
+* {
+    text-decoration: none;
+}
+
+/* NAVBAR & DROPDOWN MENU */
+.dropdown {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Hover Effect - Button Glows */
+.dropbtn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: black;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect on Links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 100px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Slight hover effect for logo */
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about-section, .team-section {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+/* Team Section */
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* New Additional Info Section */
+.additional-info {
+    text-align: left;
+    margin-top: 40px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.additional-info h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.additional-info p,
+.additional-info ul {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+.additional-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.additional-info li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.additional-info li::before {
+    content: "✔️";
+    margin-right: 10px;
+}
+.footer {
+    background-color: #222;  /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.footer a {
+    color: #1e90ff; /* Nice blue for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+

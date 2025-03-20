@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymHub Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Firebase SDKs (import as modules) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCZdECqRyF19X6v4SXOjzNkmLbdatQ1yvs",
+            authDomain: "gymhub-contact-form.firebaseapp.com",
+            projectId: "gymhub-contact-form",
+            storageBucket: "gymhub-contact-form.appspot.com",
+            messagingSenderId: "662492445346",
+            appId: "1:662492445346:web:507dcecd10050acf47f5fb",
+            measurementId: "G-V1VT94GMJH"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Function to submit feedback
+        window.submitFeedback = async function() {
+            let feedback = document.getElementById("feedback").value.trim();
+
+            if (!feedback) {
+                alert("Please enter your feedback before submitting.");
+                return;
+            }
+
+            try {
+                await addDoc(collection(db, "feedback"), {
+                    feedback: feedback,
+                    timestamp: serverTimestamp()
+                });
+
+                alert("✅ Your feedback has been saved securely in our system!");
+
+                // Hide feedback section & show thank-you message
+                document.getElementById("feedback-section").style.display = "none";
+                document.getElementById("thank-you").style.display = "block";
+
+                let chatbox = document.getElementById("chatbox");
+                chatbox.innerHTML += `<p><strong>GymHub Chatbot:</strong> 📝 Thanks for your feedback! Have a great day! 😊</p>`;
+
+                // Clear the input field
+                document.getElementById("feedback").value = "";
+            } catch (error) {
+                console.error("Error submitting feedback:", error);
+                alert("❌ There was an error saving your feedback. Please try again.");
+            }
+        };
+    </script>
+
+    <script src="script.js" defer></script> <!-- Defer Script Source -->
+</head>
+<body>
+
+    <!-- Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn">☰</button>
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="AI CHATBOT.jpg" alt="AI Chatbot Logo">
+    </div>>
+    
+
+
+<!-- Animated Hero Section -->
+<div class="hero">
+    <h1 id="welcome-text"></h1>
+    <p>Your fitness journey starts here.</p>
+    
+</div>
+<script>
+    // Typing Effect JS
+    const text = "Welcome to GymHub!";
+let index = 0;
+
+function typeEffect() {
+    if (index < text.length) {
+        document.getElementById("welcome-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100);
+    } else {
+        // Wait 3 seconds before restarting
+        setTimeout(() => {
+            document.getElementById("welcome-text").innerHTML = ""; // Clear text
+            index = 0; // Reset index
+            typeEffect(); // Restart animation
+        }, 3000);
+    }
+}
+
+// Start animation when the page loads
+window.onload = typeEffect;
+</script>
+
+
+
+
+<!-- Testimonials Section -->
+<section class="testimonial-section">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial">
+        <p>"GymHub changed my fitness routine completely! Highly recommend!"</p>
+        <h4>- Alex Johnson</h4>
+    </div>
+    <div class="testimonial">
+        <p>"The AI chatbot is amazing. It keeps me motivated every day!"</p>
+        <h4>- Sarah Williams</h4>
+    </div>
+    <div class="testimonial">
+        <p>"The AI chatbot is amazing. It keeps me motivated every day!"</p>
+        <h4>- Sarah Williams</h4>
+    </div>
+    <div class="testimonial">
+        <p>"The AI chatbot is amazing. It keeps me motivated every day!"</p>
+        <h4>- Sarah Williams</h4>
+    </div>
+</section>
+
+
+
+
+
+<hr class="chat-divider">
+<div class=chat-title>
+    <h1 id="chat-intro"></h1>
+    <p>Welcome to the Excercise Bot.</p>
+
+</div>
+
+
+
+<!-- Chatbot Container -->
+<div class="chat-container">
+    <div class="chatbox-wrapper">
+        <h2>Excercise Bot 💪</h2>
+        <div id="chatbox">
+            <p class="bot-message">👋 Welcome to the GymHub Exercise Chatbot! What is your fitness level from Beginner, Intermediate or Gym Rat</p>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-container">
+            <input type="text" id="muscle" placeholder="Enter a muscle group">
+            <button onclick="askChatbot()">Submit</button>
+            
+        </div>
+
+        <!-- Feedback Section -->
+        <div id="feedback-section" style="display: none;">
+            <input type="text" id="feedback">
+            <button onclick="submitFeedback()">Submit Feedback</button>
+        </div>
+
+        <!-- Negative Feedback Reason -->
+        <div id="reason-section" style="display: none;">
+            <p>Please explain why you didn't like it:</p>
+            <textarea id="reason"></textarea>
+            <button onclick="saveFeedback()">Submit</button>
+        </div>
+
+        <!-- Thank You Message -->
+        <p id="thank-you" style="display: none;">Thank you for using GymHub Chatbot! 😊</p>
+
+        <!-- Feedback Buttons -->
+    </div>
+</div>
+</body>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>📍 Based in London, Enfield</p>
+        <p>📧 Email: <a href="mailto:johnnyelammar@gmail.com">johnnyelammar@gmail.com</a></p>
+        <p>📞 Phone: <a href="tel:07950266625">07950266625</a></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank">
+                   <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+    <a href="admin-middlelogin.html" class="admin-login">
+        <i class="fas fa-user"></i> <!-- User icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </a>
+</footer>
+</html>

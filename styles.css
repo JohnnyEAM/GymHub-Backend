@@ -1,0 +1,335 @@
+body {
+    background-image: url('background.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+/* Smooth Fade-In Effect */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Universal Styles */
+* {
+    text-decoration: none;
+}
+
+/* NAVBAR & DROPDOWN MENU */
+.dropdown {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Hover Effect - Button Glows */
+.dropbtn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: black;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect on Links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 100px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Slight hover effect for logo */
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Dark & Modern Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(-45deg, #252525, #665454, #c46f6f, #e72208);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #e0e0e0; /* Slightly brighter for better readability */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #d0d0d0; /* Softer contrast */
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Updated Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.chatbot-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Chatbot Button Styling */
+.chatbot-button-container button {
+    background: #1e90ff; /* Nice blue shade */
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+.chatbot-button-container button:hover {
+    background: #007acc; /* Darker blue */
+    transform: scale(1.05);
+}
+/* Testimonials */
+.testimonial-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: white;
+}
+
+.testimonial {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 60%;
+    color: white;
+    font-style: italic;
+}
+
+/* ADMIN LOGIN ICON */
+.admin-login {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.admin-login:hover {
+    color: grey;
+    transform: scale(1.1);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.chat-divider {
+    width: 50%;  /* Adjust width as needed */
+    margin: 40px auto; /* Adds space & centers it */
+    border: 1px solid white; /* Simple white line */
+}
+.chat-title {
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+/* CHATBOT BOX */
+.chat-container {
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+/* Chatbox Wrapper - Initially Blurry */
+.chatbox-wrapper {
+    width: 25%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2); /* Blurry background */
+    backdrop-filter: blur(10px); /* Apply blur */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    padding-bottom: 20px;
+    transition: backdrop-filter 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* When Hovered - Becomes Clear */
+.chatbox-wrapper:hover {
+    backdrop-filter: blur(0px); /* Remove blur */
+    background: rgba(255, 255, 255, 0.9); /* Fully visible background */
+}
+
+
+
+
+/* Scrollable Chatbox */
+#chatbox {
+    width: 85%;
+    height: 200px;
+    overflow-y: auto;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Input Field */
+input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+input:focus {
+    border-color: gold;
+    box-shadow: 0px 0px 10px gold;
+    outline: none;
+}
+
+/* BUTTON STYLES */
+button {
+    margin: 5px;
+    padding: 12px 18px;
+    background: linear-gradient(45deg, gold, orange);
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+/* Button Hover */
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(255, 223, 0, 0.5);
+}
+/* ADMIN LOGIN ICON */
+.admin-login {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer {
+    background-color: #222;  /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.footer a {
+    color: #1e90ff; /* Nice blue for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
